@@ -1,3 +1,14 @@
+/*
+    Ian Anderson
+	University of Colorado Denver CSCI 4800 E01
+	Web Application Developement
+	Javascript classwork 3
+
+	March 13th, 2021
+
+	Status = Functional
+*/
+
 function searchGoogleBooks() {
     var txtSearch = document.querySelector("#txtSearch")
 
@@ -21,7 +32,7 @@ function searchGoogleBooks() {
             var template = `<ul class="col-sm-12 col-md-6 col-xl-4">`;
             template += `<a class="list-group-item list-group-item-action-active" href="${json.items[i].selfLink}">${bookInfo.title}</a>`
             template += `<li class="list-group-item">${bookInfo.authors}</li>`
-            template += `<li class="list-group-items">${bookInfo.publisher}, ${bookInfo.publishedDate}</li>`
+            template += `<li class="list-group-item">${bookInfo.publisher}, ${bookInfo.publishedDate}</li>`
             template += `</ul>`
             list += template;
         }
